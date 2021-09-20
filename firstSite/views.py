@@ -70,6 +70,7 @@ def analyze(request):
     track = False
     global count
     count = 0
+    msg=0
 
     #if the user has checked the removepunc then it will show on
     if(removepunc == "on"):
@@ -95,7 +96,7 @@ def analyze(request):
     if(track):
         return render(request,"analyze.html",{"analyzedText" : textRecieved , "count" : count})
     else:
-        return HttpResponse("Sorry, error occurred")
+        return HttpResponse("Error")
 
     # print("text : ", textRecieved)
     # return HttpResponse("remove the punctuation")
