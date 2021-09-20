@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+   <h2 class="head">Welcome to the Text Analyzer</h2>
+   <h4 class="head1">Enter your text below : </h4>
+   <form action="/analyze" method="post" > {% csrf_token %} 
+       <input class="inp" type="text" name="text" placeholder="Text" style="width:300px;"/><br>
+       <input type="checkbox" name="removepunc" >Remove Punctuations </input>
+       <br>
+       <input type="checkbox" name="removeextraspace" >Remove Extra Spaces </input>
+       <br>
+       <input type="checkbox" name="upper" >UpperCase </input>
+       <br>
+       <input type="checkbox" name="charcount" >Char Counter </input>
+       <br>
+       <input type="checkbox" name="removenewline" >Remove New Lines </input>
+       <br>
+       <button class="btn">Click</button>
+   </form>
+   <br>
+   <!-- <h2 class="head">Your analyzed text : {{analyzedText}}</h2> -->
+</body>
+</html>
